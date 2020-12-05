@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="RESOURCE/IMG/favicon.png" type="image">
+<link rel="stylesheet" href="RESOURCE/CSS/index.css" type="text/css">
+<title>TransportBillingSystem</title>
+
+</head>
+<body>
+	<div class="box">
+		<h2>Login</h2>
+		<form action="BillingServlet" method="post">
+			<div class="inputBox">
+				<input type="text" name="email" required
+					onkeyup="this.setAttribute('value', this.value);" value="" /> <label>Email</label>
+			</div>
+			<div class="inputBox">
+				<input type="password" name="password" required
+					onkeyup="this.setAttribute('value', this.value);" value="" /> <label>Password</label>
+			</div>
+			<input type="submit" value="login" />
+		</form>
+	</div>
+	<script>
+		history.pushState(null, null, location.href);
+		window.onpopstate = function() {
+			history.go(1);
+		};
+	</script>
+
+</body>
+</html>
